@@ -1,7 +1,3 @@
-header, nav, main, section, article, aside, footer, figure, figcaption, time, address {
-  display: block;
-}
-
 /* Глобальний ресет стилів та базові шрифти */
 * {
   box-sizing: border-box;
@@ -146,10 +142,6 @@ h2 {
 /* Заголовок досвіду роботи */
 .exp-header {
   font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: baseline;
 }
 
 /* Дата в блоці досвіду */
@@ -157,6 +149,7 @@ h2 {
   color: #777;
   font-weight: normal;
   font-size: 13px;
+  float: right;
 }
 
 /* Місце роботи / навчання */
