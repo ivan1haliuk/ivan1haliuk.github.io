@@ -1,0 +1,36 @@
+body {
+    padding: 30px;
+    background-color: white;
+}
+/* Корпус батарейки */
+.battery {
+    width: 250px;
+    height: 90px;
+    border: 8px solid black;
+    background-color: white;
+    margin-bottom: 20px;
+    position: relative; 
+}
+/* Кольоровий рівень заряду всередині */
+.battery::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+/* Плюсовий контакт */
+.battery::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 40px;
+    background-color: black;
+    right: -23px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Щирина та колір заряду */
+.battery.low::before { width: 30%; background-color: #e51c23; }
+.battery.medium::before { width: 65%; background-color: #ffc107; }
+.battery.full::before { width: 100%; background-color: #00aa66; }

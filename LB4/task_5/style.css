@@ -1,0 +1,18 @@
+/* Загальне оформлення таблиці та розмір клітинок */
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: 20px auto;
+}
+td {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 40px;
+}
+/* Чергування кольорів для створення шахової сітки*/
+tr:nth-child(odd) td:nth-child(even),
+tr:nth-child(even) td:nth-child(odd) {
+    background-color: lightgray;
+}
