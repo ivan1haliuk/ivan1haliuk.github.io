@@ -5,31 +5,35 @@
     <title>Простий заголовок</title>
     <style>
         body {
-            background-color: #ffffff; 
-            text-align: center;         
+            background-color: #ffffff;
+            text-align: center;
             padding-top: 50px;
         }
-        .line {
-            display: inline-block;     
-            width: 30%;               
-            height: 4px;               
-            background-color: black;  
-            vertical-align: middle;    
-        }
-        .title-text {
+        h1 {
             display: inline-block;
-            padding: 0 15px;           
             font-family: serif;
             font-size: 24px;
+            margin: 0;
+            font-weight: normal;
+        }
+        h1::before,
+        h1::after {
+            content: "";
+            display: inline-block;
+            width: 300px;
+            height: 4px;
+            background-color: black;
             vertical-align: middle;
+        }
+        h1::before {
+            margin-right: 15px;
+        }
+        h1::after {
+            margin-left: 15px;
         }
     </style>
 </head>
 <body>
-    <div>
-        <span class="line"></span>
-        <span class="title-text">TITLE</span>
-        <span class="line"></span>
-    </div>
+    <h1>TITLE</h1>
 </body>
 </html>
