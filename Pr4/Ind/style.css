@@ -1,0 +1,91 @@
+/* Спосіб 1 */
+.circle-pseudo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto; 
+    font-family: serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.circle-pseudo::before, .circle-pseudo::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-pseudo::before {
+    width: 200px;
+    height: 200px;
+    background-color: #ffff00;
+    top: -50px;
+    left: -50px;
+    z-index: -1;
+}
+
+.circle-pseudo::after {
+    width: 300px;
+    height: 300px;
+    background-color: #0000ff;
+    top: -100px;
+    left: -100px;
+    z-index: -2;
+}
+
+/* Спосіб 2 */
+.circle-shadow {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+    font-family: serif;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 
+      0 0 0 50px #ffff00,
+      0 0 0 100px #0000ff;
+}
+
+/* Спосіб 3 */
+.circle-gradient {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    font-family: serif;
+    font-size: 16px;
+    font-weight: bold;
+    background: radial-gradient(
+      circle, 
+      #ffffff 0, 
+      #ffffff 50px,
+      #ffff00 50px, 
+      #ffff00 100px,
+      #0000ff 100px, 
+      #0000ff 150px
+    );
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 50px;
+    margin: 0;
+    min-height: 100vh;
+}
