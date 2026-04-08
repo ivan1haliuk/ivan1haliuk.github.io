@@ -1,0 +1,29 @@
+body {
+    font-family: Verdana;
+}
+
+.site-nav {
+    background-color: rgb(48, 25, 202);
+    list-style: none;
+    padding: 0;
+    width: 200px;
+    border: 1px solid Black;
+}
+
+.site-nav .site-nav-item {
+    border-bottom: 1px solid Black;
+    padding: 5px;
+}
+
+.site-nav .site-nav-item:last-child {
+    border-bottom: 0;
+}
+
+.site-nav .site-nav-item a {
+    color: Yellow;
+    text-decoration: none;
+}
+
+.site-nav .site-nav-item a:hover {
+    text-decoration: underline;
+}
