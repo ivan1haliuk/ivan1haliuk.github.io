@@ -24,25 +24,26 @@ h2 {
     text-align: left;
 }
 
+.marks-table thead tr:nth-child(2) th {
+    font-weight: normal;
+}
+
 .marks-table .table-title {
-    background-color: #6bc04b;
+    background-color: #6bc04b !important;
     color: #ffffff;
     text-align: center;
     font-size: 18px;
     letter-spacing: 1px;
 }
 
-.marks-table thead tr:nth-child(2) th {
+.marks-table th:nth-child(odd),
+.marks-table td:nth-child(odd) {
     background-color: #dcf8c6;
-    font-weight: normal;
 }
 
-.marks-table tbody tr:nth-child(odd) {
+.marks-table th:nth-child(even),
+.marks-table td:nth-child(even) {
     background-color: #f0fad4;
-}
-
-.marks-table tbody tr:nth-child(even) {
-    background-color: #dcf8c6;
 }
 
 .float-table {
@@ -69,7 +70,7 @@ h2 {
 
 .f-colspan-6 {
     width: 100%;
-    background-color: #6bc04b;
+    background-color: #6bc04b !important;
     color: #ffffff;
     text-align: center;
     font-weight: bold;
@@ -77,18 +78,10 @@ h2 {
     letter-spacing: 1px;
 }
 
-.header-row .f-cell {
+.f-row .f-cell:nth-child(odd) {
     background-color: #dcf8c6;
 }
 
-.f-row:nth-child(odd) .f-cell {
-    background-color: #f0fad4; 
-}
-
-.f-row:nth-child(even) .f-cell {
-    background-color: #dcf8c6; 
-}
-
-.f-row:nth-child(1) .f-colspan-6 {
-    background-color: #6bc04b; 
+.f-row .f-cell:nth-child(even) {
+    background-color: #f0fad4;
 }
