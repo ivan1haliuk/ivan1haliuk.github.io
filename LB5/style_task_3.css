@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.pricing-table {
+    float: left;
+    width: 31%;
+    margin: 0 1.16%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.pricing-table th {
+    padding: 30px 0;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.plan-name {
+    font-size: 20px;
+}
+
+.pricing-table td {
+    padding: 10px 10px;
+    color: #999999;
+    font-size: 14px;
+}
+
+.pricing-table td b {
+    color: #666666;
+}
+
+.action-cell {
+    padding: 20px 0 25px 0;
+    border-top: 1px dashed #cccccc;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 45px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.theme-green {
+    border: 1px solid #1ca37f;
+    border-bottom: 4px solid #1ca37f;
+}
+.theme-green th {
+    background-color: #1ca37f;
+    border-bottom: 4px solid #158768;
+}
+.theme-green .btn {
+    background-color: #1ca37f;
+}
+
+.theme-orange {
+    border: 1px solid #f39c12;
+    border-bottom: 4px solid #f39c12;
+}
+.theme-orange th {
+    background-color: #f39c12;
+    border-bottom: 4px solid #d68910;
+}
+.theme-orange .btn {
+    background-color: #f39c12;
+}
+
+.theme-red {
+    border: 1px solid #c0392b;
+    border-bottom: 4px solid #c0392b;
+}
+.theme-red th {
+    background-color: #c0392b;
+    border-bottom: 4px solid #a02f23;
+}
+.theme-red .btn {
+    background-color: #c0392b;
+}

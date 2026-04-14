@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 2</title>
+    <link rel="stylesheet" href="style_task_2.css">
+</head>
+<body>
+    <h2>Спосіб 1: Верстка за допомогою тегу &lt;table&gt;</h2>
+    <table class="marks-table">
+        <thead>
+            <tr>
+                <th colspan="6" class="table-title">STUDENTS MARK SHEET</th>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Maths</th>
+                <th>Science</th>
+                <th>English</th>
+                <th>Physics</th>
+                <th>General Knowledge</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>David</td><td>85</td><td>87</td><td>88</td><td>92</td><td>88</td>
+            </tr>
+            <tr>
+                <td>Richard</td><td>91</td><td>81</td><td>78</td><td>71</td><td>74</td>
+            </tr>
+            <tr>
+                <td>John</td><td>81</td><td>86</td><td>88</td><td>84</td><td>92</td>
+            </tr>
+            <tr>
+                <td>Tony</td><td>84</td><td>86</td><td>87</td><td>82</td><td>81</td>
+            </tr>
+            <tr>
+                <td>Scott</td><td>71</td><td>79</td><td>82</td><td>88</td><td>89</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <h2>Спосіб 2: Верстка за допомогою властивості float</h2>
+    <div class="float-table">
+        <div class="f-row">
+            <div class="f-cell f-colspan-6">STUDENTS MARK SHEET</div>
+        </div>
+        <div class="f-row header-row">
+            <div class="f-cell">Name</div>
+            <div class="f-cell">Maths</div>
+            <div class="f-cell">Science</div>
+            <div class="f-cell">English</div>
+            <div class="f-cell">Physics</div>
+            <div class="f-cell">General Knowledge</div>
+        </div>
+        <div class="f-row data-row">
+            <div class="f-cell">David</div><div class="f-cell">85</div><div class="f-cell">87</div><div class="f-cell">88</div><div class="f-cell">92</div><div class="f-cell">88</div>
+        </div>
+        <div class="f-row data-row">
+            <div class="f-cell">Richard</div><div class="f-cell">91</div><div class="f-cell">81</div><div class="f-cell">78</div><div class="f-cell">71</div><div class="f-cell">74</div>
+        </div>
+        <div class="f-row data-row">
+            <div class="f-cell">John</div><div class="f-cell">81</div><div class="f-cell">86</div><div class="f-cell">88</div><div class="f-cell">84</div><div class="f-cell">92</div>
+        </div>
+        <div class="f-row data-row">
+            <div class="f-cell">Tony</div><div class="f-cell">84</div><div class="f-cell">86</div><div class="f-cell">87</div><div class="f-cell">82</div><div class="f-cell">81</div>
+        </div>
+        <div class="f-row data-row">
+            <div class="f-cell">Scott</div><div class="f-cell">71</div><div class="f-cell">79</div><div class="f-cell">82</div><div class="f-cell">88</div><div class="f-cell">89</div>
+        </div>
+    </div>
+</body>
+</html>

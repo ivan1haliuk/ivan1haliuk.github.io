@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+.marks-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+}
+
+.marks-table th, 
+.marks-table td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: left;
+}
+
+.marks-table .table-title {
+    background-color: #6bc04b;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.marks-table thead tr:nth-child(2) th {
+    background-color: #dcf8c6;
+    font-weight: normal;
+}
+
+.marks-table tbody tr:nth-child(odd) {
+    background-color: #f0fad4;
+}
+
+.marks-table tbody tr:nth-child(even) {
+    background-color: #dcf8c6;
+}
+
+.float-table {
+    width: 100%;
+    max-width: 1100px;
+    min-width: 940px;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+}
+
+.f-row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.f-cell {
+    float: left;
+    width: 16.6666%;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding: 8px;
+}
+
+.f-colspan-6 {
+    width: 100%;
+    background-color: #6bc04b;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.header-row .f-cell {
+    background-color: #dcf8c6;
+}
+
+.f-row:nth-child(odd) .f-cell {
+    background-color: #f0fad4; 
+}
+
+.f-row:nth-child(even) .f-cell {
+    background-color: #dcf8c6; 
+}
+
+.f-row:nth-child(1) .f-colspan-6 {
+    background-color: #6bc04b; 
+}
