@@ -49,7 +49,7 @@ h2.main-title {
     margin-bottom: 15px;
 }
 
-/* Роздільна лінія под категорією на всю ширину картки */
+/* Роздільна лінія під категорією на всю ширину картки */
 .divider {
     border: 0;
     border-top: 1px solid #e0e0e0;
@@ -155,8 +155,6 @@ h2.main-title {
 
 .badge-new {
     background-color: #8cc63f;
-    right: 20px; 
-    left: auto; 
 }
 
 .badge-hit {
