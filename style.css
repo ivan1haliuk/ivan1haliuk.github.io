@@ -208,5 +208,31 @@ h2 {
 }
 
 address {
-    font-style: normal;
+  font-style: normal;
+}
+
+/* SVG Sprite та соцмережі */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #3498db;
+  transform: scale(1.1);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
 }
