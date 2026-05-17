@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #888888;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Заголовки секцій */
+.section-title {
+    font-size: 2.2rem;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 400;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #ff5e94;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #e04a79;
+}
+
+/* Шапка сайту */
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: #619bd1;
+    font-weight: 400;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav a {
+    color: #888888;
+    font-size: 0.95rem;
+}
+
+.nav a:hover {
+    color: #333333;
+}
+
+/* Головний банер */
+.hero {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Блоки послуг */
+.grid-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.grid-3 > * {
+    flex: 1;
+    text-align: center;
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1;
+    filter: grayscale(100%) opacity(0.6);
+}
+
+.service-item p {
+    font-size: 0.9rem;
+}
+
+/* Секція блогу */
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.blog-item > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.blog-content {
+    flex: 1;
+    text-align: center;
+}
+
+.blog-content h3 {
+    color: #333333;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.blog-content .date {
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 15px;
+    color: #b3b3b3;
+}
+
+.blog-content p {
+    font-size: 0.95rem;
+}
+
+/* Контакти */
+.contact-info p {
+    font-size: 1.1rem;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.footer {
+    background-color: #3e4750;
+    padding: 60px 0 30px;
+}
+
+.footer-logo {
+    font-weight: 400;
+    color: #9baec0;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-nav a {
+    color: #9baec0;
+    font-size: 1.1rem;
+}
+
+.footer-nav a:hover {
+    color: #ffffff;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+/* Адаптація для моб. пристроїв */
+@media screen and (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav {
+        gap: 30px;
+    }
+
+    .grid-3 {
+        flex-direction: row;
+    }
+
+    .blog-item {
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .blog-item > img {
+        width: 300px;
+        height: 200px;
+    }
+
+    .blog-content {
+        text-align: left;
+    }
+}

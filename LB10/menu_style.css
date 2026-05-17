@@ -1,0 +1,31 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+
+.site-nav {
+    background-color: #2c3e50; 
+    list-style: none;
+    padding: 0;
+    width: 250px; 
+    border: 1px solid #1a252f; 
+}
+
+.site-nav .site-nav-item {
+    border-bottom: 1px solid #1a252f;
+    padding: 10px; 
+}
+
+.site-nav .site-nav-item:last-child {
+    border-bottom: 0;
+}
+
+.site-nav .site-nav-item a {
+    color: white;
+    text-decoration: none;
+    display: block; 
+}
+
+.site-nav .site-nav-item a:hover {
+    text-decoration: none; 
+    color: #3aa7d5;
+}
