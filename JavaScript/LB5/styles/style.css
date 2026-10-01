@@ -1,0 +1,64 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.box {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Стилі для галереї (#4) */
+#rotator {
+    text-align: center;
+    max-width: 500px;
+}
+
+.gal-top {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.gal-mid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gal-img {
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+}
+
+.gal-btn {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    user-select: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* Стилі для капчі (#5) */
+.c-box {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 10px;
+    background: #eee;
+    padding: 10px;
+    width: fit-content;
+}
+
+.c-span {
+    display: inline-block;
+    font-weight: bold;
+    font-family: monospace;
+}
