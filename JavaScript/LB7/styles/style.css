@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#location, #distance {
+    margin-top: 10px;
+}
+
+#map {
+    height: 350px;
+    max-width: 800px;
+    margin: 15px 0;
+}

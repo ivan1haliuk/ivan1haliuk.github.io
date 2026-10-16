@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wherever you go, there you are</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <form>
+        <input type="button" id="watch" value="Watch me">
+        <input type="button" id="clearWatch" value="Clear watch">
+    </form>
+    <div id="location">Your location will go here.</div>
+    <div id="distance">Distance from College will go here.</div>
+    <div id="map"></div>
+    <label for="destLat">Широта пункту призначення:</label>
+    <input type="number" id="destLat" step="any">
+    <label for="destLon">Довгота пункту призначення:</label>
+    <input type="number" id="destLon" step="any">
+    <input type="button" id="goToDestination" value="Перейти до пункту призначення">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
