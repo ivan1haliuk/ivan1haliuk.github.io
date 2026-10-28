@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота № 9 — JavaScript Promise API</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Використання JavaScript Promise API</h1>
+        </header>
+
+        <section>
+            <h2>Завдання 4. Порівняння чисел</h2>
+            <p>Введіть два числа. Promise порівняє їх через 1 секунду. Якщо числа рівні, Promise буде відхилено.</p>
+
+            <form id="compare-form">
+                <div class="fields">
+                    <div class="field">
+                        <label for="num1">Перше число</label>
+                        <input type="number" id="num1" name="num1" step="any" value="12" required>
+                    </div>
+                    <div class="field">
+                        <label for="num2">Друге число</label>
+                        <input type="number" id="num2" name="num2" step="any" value="7" required>
+                    </div>
+                </div>
+                <button type="submit" id="compare-button">Порівняти числа</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Завдання 5. Сума випадкових чисел</h2>
+            <p>Три Promise запускаються одночасно та повертають випадкові числа від 1 до 10 через 1, 2 та 3 секунди. Promise.all очікує на всі результати, після чого обчислюється сума.</p>
+            <button type="button" id="sum-button">Обчислити суму</button>
+        </section>
+
+        <section aria-live="polite">
+            <h2>Результат</h2>
+            <div id="loader" style="display: none;" role="status">Завантаження...</div>
+            <div id="result">Тут з’явиться результат виконання.</div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
