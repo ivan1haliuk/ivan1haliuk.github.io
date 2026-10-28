@@ -1,0 +1,511 @@
+/* Загальні стилі сторінки: розміри елементів, шрифт, фон і видимий фокус.
+   Атрибут hidden приховує елементи, показом яких керує JavaScript. */
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0 24px 40px;
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+button, input {
+    font: inherit;
+}
+
+a, button, input {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid #0079ad;
+    outline-offset: 4px;
+}
+
+/* Шапка сторінки: назва зліва, іконка корзини з лічильником справа.
+   Flexbox вирівнює елементи та розподіляє простір між ними. */
+.page-header {
+    max-width: 1100px;
+    min-height: 96px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.site-name {
+    color: #666;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #222;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.cart-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-count {
+    min-width: 26px;
+    height: 26px;
+    padding: 0 6px;
+    border-radius: 50%;
+    background: #f1dd2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.page-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 64px;
+    text-transform: uppercase;
+}
+
+/* Каталог і картки товарів. Flexbox створює ряд однакових за шириною карток,
+   а object-fit: contain зберігає пропорції зображень. */
+.catalog-container {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.product-card {
+    flex: 1;
+    min-width: 0;
+    padding: 30px 20px;
+    text-align: center;
+    border-right: 1px solid #e0e0e0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:last-child {
+    border-right: none;
+}
+
+.category-name {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+    margin: 0 -20px 20px;
+}
+
+.product-image {
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.product-title {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #0087bf;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    min-height: 45px;
+}
+
+.product-title:hover {
+    text-decoration: underline;
+}
+
+/* Ціни та кнопки: стара ціна закреслена, поточна виділена жирним.
+   Автоматичний верхній відступ блоку цін вирівнює кнопки карток унизу. */
+.price-block {
+    min-height: 40px;
+    margin: auto 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.old-price {
+    font-size: 14px;
+    color: #555;
+    text-decoration: line-through;
+}
+
+.new-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.availability {
+    color: #777;
+    font-size: 14px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 45px;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.btn-yellow {
+    background-color: #f1dd2c;
+    color: #000;
+}
+
+.btn-yellow:hover {
+    background-color: #e0cd22;
+}
+
+.btn-pink {
+    background-color: #cc3399;
+    color: #fff;
+    cursor: default;
+}
+
+.btn-outline {
+    border-color: #ccc;
+    background: #fff;
+    color: #333;
+}
+
+.btn-outline:hover {
+    background: #f4f4f4;
+}
+
+/* Круглі мітки та декоративні стрілки розміщуються через position: absolute
+   відносно картки або контейнера з position: relative. */
+.badge {
+    position: absolute;
+    top: -25px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.badge-new {
+    background-color: #8cc63f;
+}
+
+.badge-hit {
+    background-color: #00a0e3;
+}
+
+.arrow {
+    position: absolute;
+    top: 47px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.arrow-left { left: -15px; }
+.arrow-right { right: -15px; }
+
+/* Оформлення таблиці корзини, підсумку та дій із товарами.
+   Контейнер дозволяє горизонтальну прокрутку таблиці на вузькому екрані. */
+.basket-panel {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 24px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.basket-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    text-align: left;
+}
+
+.basket-table caption {
+    padding: 0 0 18px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.basket-table th, .basket-table td {
+    border-bottom: 1px solid #ddd;
+    padding: 16px 10px;
+}
+
+.basket-table thead {
+    background: #f4f4f4;
+}
+
+.basket-table td:nth-child(3), .basket-table td:nth-child(5) {
+    white-space: nowrap;
+}
+
+.basket-table tfoot th {
+    text-align: right;
+}
+
+.basket-table tfoot {
+    font-weight: bold;
+}
+
+.quantity-cell {
+    white-space: nowrap;
+}
+
+.text-button {
+    padding: 5px 0;
+    border: 0;
+    background: transparent;
+    color: #0079ad;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.change-quantity {
+    display: block;
+}
+
+.remove-product {
+    color: #a92340;
+}
+
+.basket-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.basket-actions .btn {
+    width: auto;
+    min-width: 180px;
+}
+
+.empty-cart {
+    margin: 16px 0 32px;
+    font-size: 22px;
+}
+
+/* Модальне вікно: фіксоване затемнення перекриває сторінку,
+   а Flexbox розміщує форму або повідомлення по центру екрана. */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-window {
+    background: #fff;
+    width: 100%;
+    max-width: 430px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 34px;
+    position: relative;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.modal-window h2 {
+    font-size: 24px;
+    margin: 0 25px 16px 0;
+    font-weight: normal;
+}
+
+.modal-window p {
+    line-height: 1.5;
+}
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    border: 0;
+    background: transparent;
+    font-size: 30px;
+    color: #666;
+    cursor: pointer;
+}
+
+#quantity-form label {
+    display: block;
+    margin: 20px 0 8px;
+    font-size: 14px;
+}
+
+#quantity {
+    width: 100%;
+    border: 1px solid #aaa;
+    padding: 12px;
+    font-size: 18px;
+}
+
+.form-error {
+    min-height: 21px;
+    font-size: 14px;
+    color: #a92340;
+    margin: 8px 0 16px;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.storage-warning, .noscript-warning {
+    padding: 16px;
+    background: #fff2d1;
+    line-height: 1.5;
+}
+
+/* Адаптивність через медіазапити: до 900 px картки стають у дві колонки,
+   до 520 px — в одну; відступи й кнопки пристосовуються до ширини екрана. */
+@media (max-width: 900px) {
+    .catalog-container {
+        flex-wrap: wrap;
+        row-gap: 35px;
+    }
+
+    .product-card {
+        flex: 0 0 50%;
+    }
+
+    .product-card:nth-of-type(2) {
+        border-right: none;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .basket-panel {
+        padding: 16px;
+    }
+
+    .basket-table {
+        min-width: 730px;
+    }
+}
+
+@media (max-width: 520px) {
+    body {
+        padding: 0 16px 24px;
+    }
+
+    .page-header {
+        min-height: 80px;
+        gap: 12px;
+    }
+
+    .site-name {
+        font-size: 11px;
+        max-width: 110px;
+        line-height: 1.6;
+    }
+
+    .cart-link {
+        gap: 7px;
+        font-size: 14px;
+    }
+
+    .main-title {
+        font-size: 20px;
+        margin: 20px 0 52px;
+    }
+
+    .product-card {
+        flex-basis: 100%;
+        border-right: none;
+    }
+
+    .product-title {
+        min-height: 0;
+    }
+
+    .basket-actions .btn {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .modal {
+        padding: 16px;
+    }
+
+    .modal-window {
+        padding: 28px 22px;
+    }
+}

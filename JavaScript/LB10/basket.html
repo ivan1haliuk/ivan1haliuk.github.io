@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛР 10 — Корзина товарів</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="page-header">
+        <a class="site-name" href="index.html">ПРАЛЬНІ МАШИНИ</a>
+        <a class="cart-link" href="basket.html" id="cart-link" aria-label="Корзина, кількість найменувань: 0" aria-current="page">
+            <svg class="cart-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M3 5h4l4 16h14l4-11H9"></path>
+                <circle cx="13" cy="27" r="2"></circle>
+                <circle cx="24" cy="27" r="2"></circle>
+            </svg>
+            <span>Корзина</span>
+            <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </a>
+    </header>
+
+    <main class="page-content">
+        <h1 class="main-title">Корзина товарів</h1>
+        <section class="basket-panel" aria-label="Обрані товари">
+            <p class="empty-cart" id="empty-cart" hidden>Корзина пуста</p>
+            <div class="table-container" id="basket-table-container" hidden>
+                <table class="basket-table">
+                    <caption>Ви обрали:</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">№</th>
+                            <th scope="col">Назва товару</th>
+                            <th scope="col">Ціна за од.</th>
+                            <th scope="col">К-сть</th>
+                            <th scope="col">Сума</th>
+                            <th scope="col">Дії</th>
+                        </tr>
+                    </thead>
+                    <tbody id="basket-items"></tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="4" scope="row">Разом до оплати:</th>
+                            <td id="basket-total" aria-live="polite">0,00 грн</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <div class="basket-actions">
+                <a class="btn btn-yellow" id="pay-link" href="#payment" hidden>Оплатити</a>
+                <a class="btn btn-outline" href="index.html">Повернутись до покупок</a>
+            </div>
+        </section>
+        <p class="storage-warning" id="storage-warning" role="alert" hidden></p>
+    </main>
+
+    <div class="modal" id="modal" hidden>
+        <section class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-text">
+            <button class="modal-close" id="modal-close" type="button" aria-label="Закрити вікно">&times;</button>
+            <h2 id="modal-title">Вкажіть кількість:</h2>
+            <p id="modal-text"></p>
+            <form id="quantity-form" novalidate>
+                <label for="quantity">Кількість, шт.</label>
+                <input id="quantity" name="quantity" type="number" min="1" max="999" step="1" value="1" required aria-describedby="quantity-error">
+                <p class="form-error" id="quantity-error" role="alert"></p>
+                <button class="btn btn-yellow" id="quantity-submit" type="submit">Зберегти зміни</button>
+            </form>
+            <div class="modal-actions" id="message-actions" hidden>
+                <a class="btn btn-yellow" id="modal-cart-link" href="basket.html">Перейти у корзину</a>
+                <button class="btn btn-outline" id="modal-continue" type="button">Зрозуміло</button>
+            </div>
+        </section>
+    </div>
+    <noscript><p class="noscript-warning">Для роботи корзини увімкніть JavaScript у браузері.</p></noscript>
+</body>
+</html>

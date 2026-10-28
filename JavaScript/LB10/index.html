@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛР 10 — Каталог пральних машин</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="page-header">
+        <a class="site-name" href="index.html">ПРАЛЬНІ МАШИНИ</a>
+        <a class="cart-link" href="basket.html" id="cart-link" aria-label="Корзина, кількість найменувань: 0">
+            <svg class="cart-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M3 5h4l4 16h14l4-11H9"></path>
+                <circle cx="13" cy="27" r="2"></circle>
+                <circle cx="24" cy="27" r="2"></circle>
+            </svg>
+            <span>Корзина</span>
+            <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </a>
+    </header>
+
+    <main class="page-content">
+        <h1 class="main-title">Обов'язково додайте своє замовлення</h1>
+
+        <div class="catalog-container">
+            <span class="arrow arrow-left" aria-hidden="true">&lt;</span>
+            <span class="arrow arrow-right" aria-hidden="true">&gt;</span>
+
+            <article class="product-card">
+                <div class="badge badge-new">НОВИНКА</div>
+                <div class="category-name">ФРОНТАЛЬНІ</div>
+                <hr class="divider">
+                <img src="images/beko.webp" alt="Пральна машина Beko BM1WFSU36233WPBB" class="product-image" width="200" height="200">
+                <a href="https://www.foxtrot.com.ua/uk/shop/stiralniye-mashiniy-beko-bm1wfsu36233wpbb.html" class="product-title" target="_blank" rel="noopener noreferrer" title="Детальний опис пральної машини Beko">ПРАЛЬНА МАШИНА BEKO</a>
+                <div class="price-block"><span class="availability">Очікується</span></div>
+                <button class="btn btn-pink" type="button" disabled>НЕЗАБАРОМ У ПРОДАЖІ</button>
+            </article>
+
+            <article class="product-card">
+                <div class="category-name">СУЧАСНІ</div>
+                <hr class="divider">
+                <img src="images/samsung.webp" alt="Пральна машина Samsung WW90DG6G94LBUA" class="product-image" width="200" height="200">
+                <a href="https://www.foxtrot.com.ua/uk/shop/stiralniye-mashiniy-samsung-ww90dg6g94lbua.html" class="product-title" target="_blank" rel="noopener noreferrer" title="Детальний опис пральної машини Samsung">ПРАЛЬНА МАШИНА SAMSUNG</a>
+                <div class="price-block">
+                    <span class="old-price">31 299 ₴</span>
+                    <span class="new-price">26 999 ₴</span>
+                </div>
+                <button class="btn btn-yellow add-to-cart" type="button" data-product-id="samsung">У КОРЗИНУ</button>
+            </article>
+
+            <article class="product-card">
+                <div class="badge badge-hit">ХІТ<br>ПРОДАЖІВ</div>
+                <div class="category-name">ВУЗЬКІ</div>
+                <hr class="divider">
+                <img src="images/hisense.webp" alt="Пральна машина Hisense WF5I9043BBFS" class="product-image" width="200" height="200">
+                <a href="https://www.foxtrot.com.ua/uk/shop/stiralniye-mashiniy-hisense-wf5i9043bbfs.html" class="product-title" target="_blank" rel="noopener noreferrer" title="Детальний опис пральної машини Hisense">ПРАЛЬНА МАШИНА HISENSE</a>
+                <div class="price-block"><span class="new-price">23 999 ₴</span></div>
+                <button class="btn btn-yellow add-to-cart" type="button" data-product-id="hisense">У КОРЗИНУ</button>
+            </article>
+
+            <article class="product-card">
+                <div class="badge badge-hit">ХІТ<br>ПРОДАЖІВ</div>
+                <div class="category-name">З ПАРОЮ</div>
+                <hr class="divider">
+                <img src="images/lg.webp" alt="Пральна машина LG F2X5FS2WB" class="product-image" width="200" height="200">
+                <a href="https://www.foxtrot.com.ua/uk/shop/stiralniye-mashiniy-lg-f2x5fs2wb.html" class="product-title" target="_blank" rel="noopener noreferrer" title="Детальний опис пральної машини LG F2X5FS2WB">ПРАЛЬНА МАШИНА LG</a>
+                <div class="price-block"><span class="new-price">28 999 ₴</span></div>
+                <button class="btn btn-yellow add-to-cart" type="button" data-product-id="lg">У КОРЗИНУ</button>
+            </article>
+        </div>
+        <p class="storage-warning" id="storage-warning" role="alert" hidden></p>
+    </main>
+
+    <div class="modal" id="modal" hidden>
+        <section class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-text">
+            <button class="modal-close" id="modal-close" type="button" aria-label="Закрити вікно">&times;</button>
+            <h2 id="modal-title">Вкажіть кількість:</h2>
+            <p id="modal-text"></p>
+            <form id="quantity-form" novalidate>
+                <label for="quantity">Кількість, шт.</label>
+                <input id="quantity" name="quantity" type="number" min="1" max="999" step="1" value="1" required aria-describedby="quantity-error">
+                <p class="form-error" id="quantity-error" role="alert"></p>
+                <button class="btn btn-yellow" id="quantity-submit" type="submit">Додати до корзини</button>
+            </form>
+            <div class="modal-actions" id="message-actions" hidden>
+                <a class="btn btn-yellow" id="modal-cart-link" href="basket.html">Перейти у корзину</a>
+                <button class="btn btn-outline" id="modal-continue" type="button">Повернутись до покупок</button>
+            </div>
+        </section>
+    </div>
+    <noscript><p class="noscript-warning">Для роботи корзини увімкніть JavaScript у браузері.</p></noscript>
+</body>
+</html>
