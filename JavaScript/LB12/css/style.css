@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: #f6f7f9;
+  color: #18202b;
+}
+
+/* Обмежуємо ширину та центруємо вміст. */
+.container {
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 20px;
+  background: white;
+}
+
+/* Відстань між розділами. */
+section {
+  margin-top: 24px;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+/* Розміщуємо поля форми одне під одним. */
+form {
+  display: grid;
+  gap: 10px;
+}
+
+/* Однаковий шрифт і відступи елементів форми. */
+input, select, button {
+  min-width: 0;
+  font: inherit;
+  padding: 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Відступ для маркерів списку. */
+ul {
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 8px;
+}
