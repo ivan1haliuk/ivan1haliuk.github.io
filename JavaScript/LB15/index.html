@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог фотопроєктів — Supabase</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+<main class="container">
+  <h1>Каталог фотопроєктів</h1>
+
+  <section>
+    <h2>Обліковий запис</h2>
+    <p id="auth-status" role="status" aria-live="polite"></p>
+    <div id="auth-forms" hidden>
+      <form id="register-form">
+        <h3>Реєстрація</h3>
+        <label for="register-email">Електронна адреса</label>
+        <input id="register-email" type="email" autocomplete="email" required>
+        <label for="register-password">Пароль</label>
+        <input id="register-password" type="password" autocomplete="new-password" minlength="6" required>
+        <button type="submit">Зареєструватися</button>
+      </form>
+      <form id="login-form">
+        <h3>Вхід</h3>
+        <label for="login-email">Електронна адреса</label>
+        <input id="login-email" type="email" autocomplete="email" required>
+        <label for="login-password">Пароль</label>
+        <input id="login-password" type="password" autocomplete="current-password" required>
+        <button type="submit">Увійти</button>
+      </form>
+    </div>
+    <div id="user-panel" hidden>
+      <p id="user-info"></p>
+      <button id="logout-button" type="button">Вийти</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Пошук, фільтрація та сортування</h2>
+    <form id="filter-form">
+      <label for="search">Пошук за назвою проєкту</label>
+      <input id="search" type="search" maxlength="150">
+      <label for="category-filter">Напрям зйомки</label>
+      <select id="category-filter">
+        <option value="">Усі напрями</option>
+        <option value="Портретна зйомка">Портретна зйомка</option>
+        <option value="Зйомка подій">Зйомка подій</option>
+        <option value="Комерційна зйомка">Комерційна зйомка</option>
+      </select>
+      <label for="sort">Сортування</label>
+      <select id="sort">
+        <option value="id">За порядком додавання</option>
+        <option value="title-asc">За назвою: від А до Я</option>
+        <option value="title-desc">За назвою: від Я до А</option>
+      </select>
+      <button type="submit">Показати проєкти</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Список фотопроєктів</h2>
+    <p id="status" role="status" aria-live="polite"></p>
+    <ul id="projects-list"></ul>
+  </section>
+
+  <section id="admin-panel" hidden>
+    <h2>Адміністративна частина</h2>
+    <p id="form-status" role="status" aria-live="polite"></p>
+    <form id="project-form">
+      <input id="project-id" type="hidden">
+      <label for="title">Назва проєкту</label>
+      <input id="title" required maxlength="150">
+      <label for="client">Замовник / творча команда</label>
+      <input id="client" required maxlength="150">
+      <label for="category">Напрям зйомки</label>
+      <select id="category" required>
+        <option value="">Оберіть напрям</option>
+        <option value="Портретна зйомка">Портретна зйомка</option>
+        <option value="Зйомка подій">Зйомка подій</option>
+        <option value="Комерційна зйомка">Комерційна зйомка</option>
+      </select>
+      <button id="save-button" type="submit">Додати фотопроєкт</button>
+      <button id="cancel-button" type="button" hidden>Скасувати редагування</button>
+    </form>
+  </section>
+</main>
+</body>
+</html>
