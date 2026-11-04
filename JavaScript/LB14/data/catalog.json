@@ -1,0 +1,77 @@
+{
+  "title": "Обов’язково додайте своє замовлення",
+  "products": [
+    {
+      "id": "beko",
+      "name": "Пральна машина Beko BM1WFSU36233WPBB",
+      "category": "ФРОНТАЛЬНІ",
+      "price": 14444,
+      "oldPrice": null,
+      "description": "Фронтальна пральна машина для щоденного прання.",
+      "image": "images/beko.webp",
+      "url": "https://www.foxtrot.com.ua/uk/shop/stiralniye-mashiniy-beko-bm1wfsu36233wpbb.html",
+      "available": false,
+      "badge": "new"
+    },
+    {
+      "id": "samsung",
+      "name": "Пральна машина Samsung WW90DG6G94LBUA",
+      "category": "СУЧАСНІ",
+      "price": 26999,
+      "oldPrice": 31299,
+      "description": "Пральна машина з сучасним керуванням.",
+      "image": "images/samsung.webp",
+      "url": "https://www.foxtrot.com.ua/uk/shop/stiralniye-mashiniy-samsung-ww90dg6g94lbua.html",
+      "available": true,
+      "badge": ""
+    },
+    {
+      "id": "hisense",
+      "name": "Пральна машина Hisense WF5I9043BBFS",
+      "category": "ВУЗЬКІ",
+      "price": 23999,
+      "oldPrice": null,
+      "description": "Пральна машина для домашнього використання.",
+      "image": "images/hisense.webp",
+      "url": "https://www.foxtrot.com.ua/uk/shop/stiralniye-mashiniy-hisense-wf5i9043bbfs.html",
+      "available": true,
+      "badge": "hit"
+    },
+    {
+      "id": "lg",
+      "name": "Пральна машина LG F2X5FS2WB",
+      "category": "З ПАРОЮ",
+      "price": 28999,
+      "oldPrice": null,
+      "description": "Пральна машина з функцією пари.",
+      "image": "images/lg.webp",
+      "url": "https://www.foxtrot.com.ua/uk/shop/stiralniye-mashiniy-lg-f2x5fs2wb.html",
+      "available": true,
+      "badge": "hit"
+    },
+    {
+      "id": "bosch",
+      "name": "Пральна машина Bosch WAN28281UA",
+      "category": "ФРОНТАЛЬНІ",
+      "price": 26799,
+      "oldPrice": null,
+      "description": "Пральна машина Bosch WAN28281UA для щоденного догляду за одягом.",
+      "image": "images/bosch.jpg",
+      "url": "https://www.foxtrot.com.ua/uk/shop/stiralniye-mashiniy-bosch-wan28281ua.html",
+      "available": true,
+      "badge": ""
+    },
+    {
+      "id": "electrolux",
+      "name": "Пральна машина Electrolux EWS6226CU",
+      "category": "КОМПАКТНІ",
+      "price": 17499,
+      "oldPrice": null,
+      "description": "Пральна машина Electrolux EWS6226CU для щоденного догляду за одягом.",
+      "image": "images/electrolux.jpg",
+      "url": "https://www.foxtrot.com.ua/uk/shop/stiralniye-mashiniy-electrolux-ews6226cu.html",
+      "available": true,
+      "badge": ""
+    }
+  ]
+}
